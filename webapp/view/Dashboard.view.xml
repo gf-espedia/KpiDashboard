@@ -1,0 +1,122 @@
+<mvc:View controllerName="com.espedia.demo.KpiDashboard.controller.Dashboard" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<VBox class="sapUiResponsiveMargin" width="80%">
+						<VBox >
+							<Title titleStyle="H2" text="Problem Identification" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+							<HBox class="sapUiSmallMarginBottom">
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Preventive vs. Reactive Maintenance Orders">
+									<tileContent>
+										<TileContent>
+											<content>
+												<NumericContent scale="%" value="23" icon="sap-icon://factory"/>
+											</content>
+										</TileContent>
+									</tileContent>
+								</GenericTile>
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Outstanding Notifications" subheader="For more than 10 days">
+									<tileContent>
+										<TileContent>
+											<content>
+												<NumericContent value="12" valueColor="Error" icon="sap-icon://request"/>
+											</content>
+										</TileContent>
+									</tileContent>
+								</GenericTile>
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Avg. order creation time" subheader="From notification creation">
+									<tileContent>
+										<TileContent>
+											<content>
+												<NumericContent value="2.3" scale="Days" valueColor="Critical" icon="sap-icon://time-entry-request"/>
+											</content>
+										</TileContent>
+									</tileContent>
+								</GenericTile>
+							</HBox>
+						</VBox>
+						<HBox justifyContent="SpaceBetween" class="sapUiSmallMarginBottom">
+							<VBox >
+								<Title titleStyle="H2" text="Order Planning" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+								<HBox class="sapUiSmallMarginBottom">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Unreleased Orders}">
+										<tileContent>
+											<TileContent>
+												<content>
+													<NumericContent scale="%" value="17" icon="sap-icon://approvals"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Orders Not Scheduled For 10 Days Or More">
+										<tileContent>
+											<TileContent>
+												<content>
+													<NumericContent scale="%" value="8" valueColor="Good" icon="sap-icon://activity-assigned-to-goal"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+							</VBox>
+							<VBox >
+								<Title titleStyle="H2" text="Order Completion" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+								<HBox class="sapUiSmallMarginBottom">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Notification With No Damage/Cause Code"
+									subheader="Perchè questo dovrebbe essere qui?">
+										<tileContent>
+											<TileContent>
+												<content>
+													<NumericContent scale="%" value="32" valueColor="Critical" icon="sap-icon://approvals"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Orders Completed Within 5 Days">
+										<tileContent>
+											<TileContent>
+												<content>
+													<NumericContent scale="%" value="78" valueColor="Good" icon="sap-icon://complete"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+							</VBox>
+						</HBox>
+						<VBox >
+							<Title titleStyle="H2" text="Root Cause Analysis" class="sapUiSmallMarginTop "/>
+							<HBox alignItems="Center" class="sapUiSmallMarginBottom sapUiTinyMarginBegin">
+								<Label text="Equipment" labelFor="equiInput" class="sapUiTinyMarginEnd"/>
+								<Input value="10000185" id="equiInput" showValueHelp="true" valueHelpRequest="handleEquipmentF4"/>
+								<Button text="Analyse"/>
+							</HBox>
+							<HBox class="sapUiSmallMarginBottom">
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Mean Time To Repair" subheader="MTTR">
+									<tileContent>
+										<TileContent>
+											<content>
+												<NumericContent scale="H" value="11.3" icon="sap-icon://future"/>
+											</content>
+										</TileContent>
+									</tileContent>
+								</GenericTile>
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Mean Time Between Failures" subheader="MTBF">
+									<tileContent>
+										<TileContent>
+											<content>
+												<NumericContent scale="G." value="55"  icon="sap-icon://status-error"/>
+											</content>
+										</TileContent>
+									</tileContent>
+								</GenericTile>
+							</HBox>
+						</VBox>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
