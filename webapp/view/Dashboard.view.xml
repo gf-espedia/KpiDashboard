@@ -6,22 +6,22 @@
 				<content>
 					<VBox class="sapUiResponsiveMargin" width="80%">
 						<VBox >
-							<Title titleStyle="H2" text="Problem Identification" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+							<Title titleStyle="H2" text="{i18n>firstSection}" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
 							<HBox class="sapUiSmallMarginBottom">
-								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Preventive vs. Reactive Maintenance Orders">
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>predVsReactOrder}">
 									<tileContent>
 										<TileContent>
 											<content>
-												<NumericContent scale="%" value="23" icon="sap-icon://factory"/>
+												<NumericContent id="PredVsReactOrd" icon="sap-icon://factory"/>
 											</content>
 										</TileContent>
 									</tileContent>
 								</GenericTile>
-								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Outstanding Notifications" subheader="For more than 10 days">
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>outstNotif}" subheader="{i18n>gt10Days}">
 									<tileContent>
 										<TileContent>
 											<content>
-												<NumericContent value="12" valueColor="Error" icon="sap-icon://request"/>
+												<NumericContent id="DelayNotif" icon="sap-icon://request"/>
 											</content>
 										</TileContent>
 									</tileContent>
@@ -30,7 +30,7 @@
 									<tileContent>
 										<TileContent>
 											<content>
-												<NumericContent value="2.3" scale="Days" valueColor="Critical" icon="sap-icon://time-entry-request"/>
+												<NumericContent id="DayNotifOrderAvg" icon="sap-icon://time-entry-request"/>
 											</content>
 										</TileContent>
 									</tileContent>
@@ -39,13 +39,13 @@
 						</VBox>
 						<HBox justifyContent="SpaceBetween" class="sapUiSmallMarginBottom">
 							<VBox >
-								<Title titleStyle="H2" text="Order Planning" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+								<Title titleStyle="H2" text="{i18n>secondSection}" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
 								<HBox class="sapUiSmallMarginBottom">
-									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Unreleased Orders}">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Unreleased Orders">
 										<tileContent>
 											<TileContent>
 												<content>
-													<NumericContent scale="%" value="17" icon="sap-icon://approvals"/>
+													<NumericContent id="RelVsUnrelOrder" icon="sap-icon://approvals"/>
 												</content>
 											</TileContent>
 										</tileContent>
@@ -54,31 +54,7 @@
 										<tileContent>
 											<TileContent>
 												<content>
-													<NumericContent scale="%" value="8" valueColor="Good" icon="sap-icon://activity-assigned-to-goal"/>
-												</content>
-											</TileContent>
-										</tileContent>
-									</GenericTile>
-								</HBox>
-							</VBox>
-							<VBox >
-								<Title titleStyle="H2" text="Order Completion" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
-								<HBox class="sapUiSmallMarginBottom">
-									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Notification With No Damage/Cause Code"
-									subheader="Perchè questo dovrebbe essere qui?">
-										<tileContent>
-											<TileContent>
-												<content>
-													<NumericContent scale="%" value="32" valueColor="Critical" icon="sap-icon://approvals"/>
-												</content>
-											</TileContent>
-										</tileContent>
-									</GenericTile>
-									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Orders Completed Within 5 Days">
-										<tileContent>
-											<TileContent>
-												<content>
-													<NumericContent scale="%" value="78" valueColor="Good" icon="sap-icon://complete"/>
+													<NumericContent id="DelayOrder" icon="sap-icon://activity-assigned-to-goal"/>
 												</content>
 											</TileContent>
 										</tileContent>
@@ -86,7 +62,33 @@
 								</HBox>
 							</VBox>
 						</HBox>
-						<VBox >
+						<HBox>
+							<VBox >
+								<Title titleStyle="H2" text="{i18n>thirdSection}" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
+								<HBox class="sapUiSmallMarginBottom">
+									<!--<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Notification With No Damage/Cause Code"
+										subheader="Perchè questo dovrebbe essere qui?">
+										<tileContent>
+											<TileContent>
+												<content>
+													<NumericContent id="NotifWoCauseOrDamage" icon="sap-icon://approvals"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>-->
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Orders Completed Within 5 Days">
+										<tileContent>
+											<TileContent>
+												<content>
+													<NumericContent id="OrderCompletedInTime" icon="sap-icon://complete"/>
+												</content>
+											</TileContent>
+										</tileContent>
+									</GenericTile>
+								</HBox>
+							</VBox>
+						</HBox>
+						<!--<VBox >
 							<Title titleStyle="H2" text="Root Cause Analysis" class="sapUiSmallMarginTop "/>
 							<HBox alignItems="Center" class="sapUiSmallMarginBottom sapUiTinyMarginBegin">
 								<Label text="Equipment" labelFor="equiInput" class="sapUiTinyMarginEnd"/>
@@ -113,7 +115,7 @@
 									</tileContent>
 								</GenericTile>
 							</HBox>
-						</VBox>
+						</VBox> -->
 					</VBox>
 				</content>
 			</Page>
