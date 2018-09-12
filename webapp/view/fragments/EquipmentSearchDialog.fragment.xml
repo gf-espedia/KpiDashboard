@@ -1,0 +1,59 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Dialog title="Equipments" contentWidth="70%" contentHeight="80%">
+		<content>
+			<VBox>
+				<VBox class="sapContrastPlus sapMOHR sapMOHRBgSolid">
+					<HBox wrap="Wrap">
+						<f:Form editable="true">
+							<f:layout>
+								<f:ResponsiveGridLayout labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0"
+									emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" singleContainerFullSize="false"/>
+							</f:layout>
+							<f:formContainers>
+								<f:FormContainer>
+									<f:formElements>
+										<f:FormElement label="Equipment number">
+											<f:fields>
+												<Input id="eqSearchNum" submit="equiDialogSearch"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Description">
+											<f:fields>
+												<Input id="eqSearchDescr" submit="equiDialogSearch"/>
+											</f:fields>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+								<f:FormContainer>
+									<f:formElements>
+										<f:FormElement label="Plant">
+											<f:fields>
+												<Input id="eqSearchPlant" submit="equiDialogSearch"/>
+											</f:fields>
+										</f:FormElement>
+										<f:FormElement label="Functional location">
+											<f:fields>
+												<Input id="eqSearchFuncloc" submit="equiDialogSearch"/>
+											</f:fields>
+										</f:FormElement>
+									</f:formElements>
+								</f:FormContainer>
+							</f:formContainers>
+						</f:Form>
+					</HBox>
+					<Toolbar class=" sapUiSmallMarginTop">
+						<ToolbarSpacer/>
+						<Button text="Clear" press="equiClearForm"/>
+						<Button text="Search" type="Emphasized" press="equiDialogSearch"/>
+					</Toolbar>
+				</VBox>
+				<List id="equiDialogList" items="{/EquiSearchHelpSet}">
+					<StandardListItem iconInset="false" title="{Equnr}" description="{Eqktx}" info="{Tplnr}" type="Active" press="equiDialogSelect"/>
+				</List>
+			</VBox>
+		</content>
+		<buttons>
+			<Button text="Cancel" press="eqSearchDialogClose"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

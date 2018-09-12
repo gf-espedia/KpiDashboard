@@ -1,11 +1,20 @@
 <mvc:View controllerName="com.espedia.demo.KpiDashboard.controller.Dashboard" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:uxap="sap.uxap">
 	<App id="idAppControl">
 		<pages>
 			<Page title="{i18n>title}">
+				<subHeader>
+					<Toolbar>
+						<ToolbarSpacer width="2%"/>
+						<Title titleStyle="H2" id="pageHeader" text="{/EquiDescr}"/>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://add-filter" tooltip="Add Filter" press="handleEquipmentF4"/>
+						<Button icon="sap-icon://clear-filter" tooltip="Clear Filter" press="handleClearEquipment"/>
+					</Toolbar>
+				</subHeader>
 				<content>
-					<VBox class="sapUiResponsiveMargin" width="80%">
-						<VBox >
+					<VBox class="sapUiResponsiveMargin">
+						<VBox>
 							<Title titleStyle="H2" text="{i18n>firstSection}" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
 							<HBox class="sapUiSmallMarginBottom">
 								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>predVsReactOrder}">
@@ -75,7 +84,7 @@
 												</content>
 											</TileContent>
 										</tileContent>
-									</GenericTile>-->
+									</GenericTile> -->
 									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Orders Completed Within 5 Days">
 										<tileContent>
 											<TileContent>
@@ -114,7 +123,7 @@
 										</TileContent>
 									</tileContent>
 								</GenericTile>
-							</HBox>
+							</HBox> 
 						</VBox> -->
 					</VBox>
 				</content>
