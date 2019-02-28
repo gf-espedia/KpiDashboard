@@ -78,7 +78,7 @@ sap.ui.define([
 					this._setBusy(false);
 				}.bind(this),
 				error: function (err) {
-					sap.m.MessageToast.show("OData Error");
+					sap.m.MessageToast.show(this.getView().getModel("i18n").getResourceBundle().getText("ODataError"));
 					this._setBusy(false);
 				}.bind(this)
 			});

@@ -35,7 +35,7 @@
 										</TileContent>
 									</tileContent>
 								</GenericTile>
-								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Avg. order creation time" subheader="From notification creation">
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>Head1}" subheader="{i18n>Head1_1}">
 									<tileContent>
 										<TileContent>
 											<content>
@@ -50,7 +50,7 @@
 							<VBox >
 								<Title titleStyle="H2" text="{i18n>secondSection}" class="sapUiSmallMarginTop sapUiTinyMarginBegin"/>
 								<HBox class="sapUiSmallMarginBottom">
-									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Unreleased Orders">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>UnreleasedOrders}">
 										<tileContent>
 											<TileContent>
 												<content>
@@ -59,7 +59,7 @@
 											</TileContent>
 										</tileContent>
 									</GenericTile>
-									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Orders Not Scheduled For 10 Days Or More">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>Head2}">
 										<tileContent>
 											<TileContent>
 												<content>
@@ -85,7 +85,7 @@
 											</TileContent>
 										</tileContent>
 									</GenericTile> -->
-									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="Orders Completed Within 5 Days">
+									<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop" header="{i18n>Head3}">
 										<tileContent>
 											<TileContent>
 												<content>

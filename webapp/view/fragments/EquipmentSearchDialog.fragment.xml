@@ -1,5 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
-	<Dialog title="Equipments" contentWidth="70%" contentHeight="80%">
+	<Dialog title="{i18n>Equipments}" contentWidth="70%" contentHeight="80%">
 		<content>
 			<VBox>
 				<VBox class="sapContrastPlus sapMOHR sapMOHRBgSolid">
@@ -12,12 +12,12 @@
 							<f:formContainers>
 								<f:FormContainer>
 									<f:formElements>
-										<f:FormElement label="Equipment number">
+										<f:FormElement label="{i18n>EquipmentNumber}">
 											<f:fields>
 												<Input id="eqSearchNum" submit="equiDialogSearch"/>
 											</f:fields>
 										</f:FormElement>
-										<f:FormElement label="Description">
+										<f:FormElement label="{i18n>Description}">
 											<f:fields>
 												<Input id="eqSearchDescr" submit="equiDialogSearch"/>
 											</f:fields>
@@ -26,12 +26,12 @@
 								</f:FormContainer>
 								<f:FormContainer>
 									<f:formElements>
-										<f:FormElement label="Plant">
+										<f:FormElement label="{i18n>Plant}">
 											<f:fields>
 												<Input id="eqSearchPlant" submit="equiDialogSearch"/>
 											</f:fields>
 										</f:FormElement>
-										<f:FormElement label="Functional location">
+										<f:FormElement label="{i18n>FunctionalLocation}">
 											<f:fields>
 												<Input id="eqSearchFuncloc" submit="equiDialogSearch"/>
 											</f:fields>
@@ -43,8 +43,8 @@
 					</HBox>
 					<Toolbar class=" sapUiSmallMarginTop">
 						<ToolbarSpacer/>
-						<Button text="Clear" press="equiClearForm"/>
-						<Button text="Search" type="Emphasized" press="equiDialogSearch"/>
+						<Button text="{i18n>Clear}" press="equiClearForm"/>
+						<Button text="{i18n>Search}" type="Emphasized" press="equiDialogSearch"/>
 					</Toolbar>
 				</VBox>
 				<List id="equiDialogList" items="{/EquiSearchHelpSet}">
@@ -53,7 +53,7 @@
 			</VBox>
 		</content>
 		<buttons>
-			<Button text="Cancel" press="eqSearchDialogClose"/>
+			<Button text="{i18n>Cancel}" press="eqSearchDialogClose"/>
 		</buttons>
 	</Dialog>
 </core:FragmentDefinition>
